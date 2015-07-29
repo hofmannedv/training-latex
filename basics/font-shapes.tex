@@ -1,0 +1,58 @@
+
+% -----------------------------------------------------------
+% demonstrates how to change between various font shapes
+%
+% (C) 2015 Frank Hofmann, Berlin, Germany
+% Released under GNU Public License (GPL)
+% email frank.hofmann@efho.de
+%
+% Paragraph content taken from Wikipedia:
+% https://en.wikipedia.org/wiki/GNUstep
+% -----------------------------------------------------------
+
+% set preamble
+% - define document class: article
+\documentclass{article}
+
+% - do not change paper size
+% - do not change character encoding: UTF-8 (Unicode)
+% - do not change document grammar checking: english
+
+% document content
+% - start document here
+\begin{document}
+
+\section{Emphasise text}
+\subsection{Bold face, and italic}
+\textbf{GNUstep} is a free software implementation of the \textit{Cocoa} (formerly
+\textit{OpenStep}) Objective-C frameworks, widget toolkit, and application
+development tools for Unix-like operating systems and Microsoft Windows.
+It is part of the GNU Project.
+
+\subsection{Slanted, and small capitals}
+\textsl{GNUstep} is a free software implementation of the \textsc{Cocoa} (formerly
+\textsc{OpenStep}) Objective-C frameworks, widget toolkit, and application
+development tools for Unix-like operating systems and Microsoft Windows.
+It is part of the \textsc{GNU Project}.
+
+\section{Font style}
+\subsection{Sans serif}
+\textsf{GNUstep is a free software implementation of the Cocoa (formerly
+OpenStep) Objective-C frameworks, widget toolkit, and application
+development tools for Unix-like operating systems and Microsoft Windows.
+It is part of the GNU Project.}
+
+\subsection{Serif}
+\textrm{GNUstep is a free software implementation of the Cocoa (formerly
+OpenStep) Objective-C frameworks, widget toolkit, and application
+development tools for Unix-like operating systems and Microsoft Windows.
+It is part of the GNU Project.}
+
+\subsection{Typewriter}
+\texttt{GNUstep is a free software implementation of the Cocoa (formerly
+OpenStep) Objective-C frameworks, widget toolkit, and application
+development tools for Unix-like operating systems and Microsoft Windows.
+It is part of the GNU Project.}
+
+% - end document here
+\end{document}
