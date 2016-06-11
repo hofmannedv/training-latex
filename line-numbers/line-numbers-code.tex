@@ -1,0 +1,49 @@
+% -----------------------------------------------------------
+% demonstrates how to attach line numbers to code snippets, 
+% and build according references
+%
+% (C) 2015 Frank Hofmann, Berlin, Germany
+% Released under GNU Public License (GPL)
+% email frank.hofmann@efho.de
+% -----------------------------------------------------------
+
+% set preamble
+% - define document class: article
+\documentclass{article}
+
+% - do not change paper size
+% - do not change character encoding: UTF-8 (Unicode)
+% - do not change document grammar checking: english
+
+% - load additional package lineno
+\usepackage{lineno}
+
+% document content
+% - start document here
+\begin{document}
+
+% paragraph without line numbers
+\noindent The makefile \texttt{Makefile} contains the following lines of code: \\
+
+
+% paragraph two with line numbers
+\linenumbers
+\noindent\texttt{%
+\linelabel{all}all: html pdf \\
+~\\
+\linelabel{html}html einsteiger.html: *.asciidoc Makefile \\
+asciidoc -a toc -a toclevels=3 einsteiger.asciidoc \\
+~\\
+\linelabel{pdf}pdf einsteiger.pdf: *.asciidoc Makefile \\
+a2x -L -f pdf einsteiger.asciidoc
+}
+
+% disable line numbers
+\nolinenumbers
+~\\
+Calling \texttt{make all} results in the creation of both an HTML, and a
+PDF file (see line~\ref{all}). The interpreter jumps to the according
+labels as defined in lines~\ref{html}, and ~\ref{pdf}.
+
+% - end document here
+\end{document}

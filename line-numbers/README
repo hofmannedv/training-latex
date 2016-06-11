@@ -1,0 +1,9 @@
+README
+------
+
+* line-numbers.tex: 
+  display various ways to extend paragraphs by line numbers
+
+* line-numbers-code.tex:
+  display various ways to extend paragraphs by line numbers, and
+  reference to selected lines

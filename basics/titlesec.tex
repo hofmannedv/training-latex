@@ -1,0 +1,52 @@
+
+% -----------------------------------------------------------
+% demonstrates how to write a report class LaTeX document with
+% an adapted chapter style based on the titlesec package
+%
+% (C) 2016 Frank Hofmann, Berlin, Germany
+% Released under GNU Public License (GPL)
+% email frank.hofmann@efho.de
+%
+% Idea seen on:
+% Fancy LaTeX chapter styles
+% http://texblog.org/2012/07/03/fancy-latex-chapter-styles/
+% -----------------------------------------------------------
+
+% set preamble
+% - define document class: report
+\documentclass{report}
+
+% - keep the paper size
+% - set the character encoding: UTF-8 (Unicode)
+\usepackage[utf8]{inputenc}
+
+% - do not change document grammar checking: english
+
+% - use the titlesec package, as well as blindtext, and color
+\usepackage{titlesec, blindtext, color}
+
+% - define a new command for the gray value
+\definecolor{gray75}{gray}{0.75}
+
+% - define a new command for the horizontal space
+\newcommand{\hsp}{\hspace{20pt}}
+
+% - redefine the format of the chapter style
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{\rule[-4mm]{0.5mm}{14mm}}\hsp}{0pt}{\Huge\bfseries}
+
+% - set the font style: utopia
+\usepackage{utopia}
+
+% - improve the microtype -- how the document looks like
+\usepackage{microtype}
+
+% document content
+% - start document here
+\begin{document}
+
+% - example chapter with a blind text
+\chapter{Less is More}
+\blindtext
+
+% - end document here
+\end{document}

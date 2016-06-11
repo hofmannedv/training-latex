@@ -1,6 +1,5 @@
-
 % -----------------------------------------------------------
-% demonstrates how to write an article class LaTeX document
+% demonstrates how to attach line numbers to a paragraph
 %
 % (C) 2015 Frank Hofmann, Berlin, Germany
 % Released under GNU Public License (GPL)
@@ -18,6 +17,9 @@
 % - do not change character encoding: UTF-8 (Unicode)
 % - do not change document grammar checking: english
 
+% - load additional package lineno
+\usepackage{lineno}
+
 % document content
 % - start document here
 \begin{document}
@@ -25,7 +27,8 @@
 % division of content: numbered headline for a section
 \section{The Isle of Skye}
 
-% paragraph one
+% paragraph one with line numbers
+\linenumbers
 Skye or the Isle of Skye is the largest and most northerly major island
 in the Inner Hebrides of Scotland. The island's peninsulas radiate from
 a mountainous centre dominated by the Cuillins, the rocky slopes of
@@ -33,7 +36,8 @@ which provide some of the most dramatic mountain scenery in the country.
 Although it has been suggested that the Gaelic Sgitheanach describes a
 winged shape there is no definitive agreement as to the name's origins.
 
-% paragraph two
+% paragraph two with line numbers every fifth line, only
+\modulolinenumbers[5]
 The island has been occupied since the Mesolithic period and its history
 includes a time of Norse rule and a long period of domination by Clan
 MacLeod and Clan Donald. The 18th-century Jacobite risings led to the
@@ -45,6 +49,19 @@ the 20th century. Skye's population increased by 4 per cent between 1991
 and 2001. About a third of the residents were Gaelic speakers in 2001,
 and although their numbers are in decline this aspect of island culture
 remains important.
+
+% paragraph three with line numbers disabled
+\nolinenumbers
+The main industries are tourism, agriculture, fishing and forestry. Skye
+is part of the Highland Council local government area. The island's
+largest settlement is Portree, known for its picturesque harbour. There
+are links to various nearby islands by ferry and, since 1995, to the
+mainland by a road bridge. The climate is mild, wet and windy. The
+abundant wildlife includes the golden eagle, red deer and Atlantic
+salmon. The local flora is dominated by heather moor, and there are
+nationally important invertebrate populations on the surrounding sea
+bed. Skye has provided the locations for various novels and feature
+films and is celebrated in poetry and song.
 
 % - end document here
 \end{document}

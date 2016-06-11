@@ -1,0 +1,18 @@
+README
+------
+
+* article.tex: 
+  demonstrates how to write a document using the article class
+
+* book.tex:
+  demonstrates how to write a document using the book class
+
+* book-toc.tex:
+  demonstrates how to write a document using the book class, and with
+  table of contents
+
+* font-shapes.tex:
+  different font styles, and shapes
+
+* titlesec.tex:
+  different style for a chapter using the titlesec package
